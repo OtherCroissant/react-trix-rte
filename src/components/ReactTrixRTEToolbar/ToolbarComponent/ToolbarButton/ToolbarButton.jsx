@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { TOOLBAR_LANGUAGE_OPTS } from "../../constants";
 
 function ToolbarButton(props) {
-  const { type, classNames, data, tabIndex, languageKey, elementProps } = props;
+  const { type, classNames, data, tabIndex, languageKey, elementProps = {} } = props;
 
   let dataAttributeOptions = {};
   if(data) {
@@ -26,10 +26,6 @@ function ToolbarButton(props) {
       {TOOLBAR_LANGUAGE_OPTS[languageKey]}
     </button>
   )
-}
-
-ToolbarButton.defaultProps = {
-  elementProps: {},
 }
 
 ToolbarButton.propTypes = {

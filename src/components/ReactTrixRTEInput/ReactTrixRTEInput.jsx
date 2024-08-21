@@ -7,7 +7,7 @@ import './ReactTrixRTEInput.style';
 
 function ReactTrixRTEInput(props) {
   const {
-    defaultValue,
+    defaultValue = '',
     toolbarId,
     onBlur,
     onFocus,
@@ -19,7 +19,7 @@ function ReactTrixRTEInput(props) {
     onSelectionChange,
     onBeforeInitialize,
     trixInputRef,
-    isRailsDirectUpload,
+    isRailsDirectUpload = false,
     placeholder,
     autofocus,
     className,
@@ -93,11 +93,6 @@ function ReactTrixRTEInput(props) {
     </>
   );
 }
-
-ReactTrixRTEInput.defaultProps = {
-  isRailsDirectUpload: false,
-  defaultValue: '',
-};
 
 ReactTrixRTEInput.propTypes = {
   id: PropTypes.string,
